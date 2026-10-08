@@ -1,6 +1,5 @@
 package com.pemmob.pawangdigimon.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -9,35 +8,49 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = CyberNeonCyan,
+    onPrimary = Color.Black,
+    primaryContainer = Color(0xFF00363D),
+    onPrimaryContainer = CyberNeonCyan,
+    secondary = CyberAmber,
+    onSecondary = Color.Black,
+    tertiary = CyberElectricBlue,
+    background = DarkCyberBackground,
+    onBackground = Color(0xFFECEFF1),
+    surface = DarkCyberSurface,
+    onSurface = Color(0xFFECEFF1),
+    surfaceVariant = DarkCyberSurfaceVariant,
+    onSurfaceVariant = Color(0xFFB0BEC5),
+    outline = DarkCyberOutline,
+    outlineVariant = Color(0xFF233547)
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
+    primary = Color(0xFF006875),
     onPrimary = Color.White,
+    primaryContainer = Color(0xFF97F0FF),
+    onPrimaryContainer = Color(0xFF001F24),
+    secondary = Color(0xFF705D00),
     onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    tertiary = Color(0xFF006399),
+    background = LightCyberBackground,
+    onBackground = Color(0xFF0F172A),
+    surface = LightCyberSurface,
+    onSurface = Color(0xFF0F172A),
+    surfaceVariant = LightCyberSurfaceVariant,
+    onSurfaceVariant = Color(0xFF475569),
+    outline = LightCyberOutline,
+    outlineVariant = Color(0xFFE2E8F0)
 )
 
 @Composable
 fun PawangDigimonTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
@@ -45,7 +58,6 @@ fun PawangDigimonTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }

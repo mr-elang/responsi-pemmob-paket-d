@@ -2,10 +2,16 @@ package com.pemmob.pawangdigimon.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+val CyberNeonCyan = Color(0xFF00E5FF)
+val CyberElectricBlue = Color(0xFF00B0FF)
+val CyberAmber = Color(0xFFFFC400)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val DarkCyberBackground = Color(0xFF000000)
+val DarkCyberSurface = Color(0xFF000000)
+val DarkCyberSurfaceVariant = Color(0xFF1E2D3D)
+val DarkCyberOutline = Color(0xFF2A3D52)
+
+val LightCyberBackground = Color(0xFFF1F5F9)
+val LightCyberSurface = Color(0xFFFFFFFF)
+val LightCyberSurfaceVariant = Color(0xFFE2E8F0)
+val LightCyberOutline = Color(0xFFCBD5E1)
